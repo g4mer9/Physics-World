@@ -62,11 +62,13 @@
   <ItemGroup>
     <Compile Include="Assets\Week2\TriggerSpawn.cs" />
     <Compile Include="Assets\Week2\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\JumpPad.cs" />
     <Compile Include="Assets\Week2\DestroyDoor.cs" />
     <Compile Include="Assets\Week2\BasicCharacter.cs" />
     <Compile Include="Assets\Week2\TriggerScript.cs" />
     <Compile Include="Assets\Week2\TriggerDestroy.cs" />
     <Compile Include="Assets\Week2\OnBalloons.cs" />
+    <Compile Include="Assets\Scripts\DangerPad.cs" />
     <Compile Include="Assets\Week2\BumperBounce.cs" />
     <Compile Include="Assets\Week2\BalloonUp.cs" />
     <Compile Include="Assets\Week2\CameraLookShoot.cs" />

@@ -5,39 +5,70 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Vector3 velocity;
+
     private bool can_jump = true;
-    private float gravity_strength = 10.0f;
-    private float jump_power = 8.0f;
-    private float walk_power = 5.0f;
+    //private float gravity_strength = 10.0f;
+    private float jump_power = 20.0f;
+    private float walk_power = 15.0f;
     private int jump_timer = 0;
-    private int jump_length = 45;
+    private int jump_length = 20;
+    private int rotate_speed = 5;
+    private float xRotation = 0f;
+    public float mouseSensitivity = 10f;
+    Rigidbody body;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        body = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
+    private void Update()
+    {
+        //modified GPT FPS camera code{
+
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.fixedDeltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.fixedDeltaTime;
+
+        // Calculate the up/down rotation and clamp it
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        // Apply the rotation to the camera (up/down)
+        gameObject.transform.GetChild(0).transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+
+        // Rotate the player's body (left/right)
+        body.transform.Rotate(Vector3.up * mouseX);
+
+        //}
+    }
+
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Rigidbody body = gameObject.GetComponent<Rigidbody>();
+        
         //raycast down a few units to check grounded, else vel.y = 0f
-
+        if(Physics.Raycast(transform.position, -transform.up, 1))
+        {
+            can_jump = true;
+            jump_timer = 0;
+        }
         //stop jumping and let gravity take over?
         /**else*/
-        if (jump_timer >= jump_length || Input.GetButtonUp("Jump")) can_jump = false;
+        if (jump_timer >= jump_length || (Input.GetButtonUp("Jump") && jump_timer >= (jump_length/2))) can_jump = false;
 
         if (Input.GetAxis("Horizontal") != 0)
         {
             Debug.Log("Left/Right");
+            body.AddForce(transform.right * walk_power * Input.GetAxis("Horizontal"));
 
         }
         if (Input.GetAxis("Vertical") != 0)
         {
             Debug.Log("Forwards/Backwards");
+            body.AddForce(transform.forward * walk_power * Input.GetAxis("Vertical"));
         }
         if (Input.GetButton("Jump") && can_jump)
         {
@@ -45,5 +76,8 @@ public class PlayerMovement : MonoBehaviour
             jump_timer++;
             body.AddForce(Vector3.up * jump_power);
         }
+
+
+        
     }
 }

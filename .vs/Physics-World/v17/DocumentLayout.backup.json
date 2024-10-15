@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Projects\\CMPM125\\Physics-World\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C44CCFA-2D40-B04C-EDC7-8499BF68A25A}|Assembly-CSharp.csproj|c:\\projects\\cmpm125\\physics-world\\assets\\scripts\\dangerpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C44CCFA-2D40-B04C-EDC7-8499BF68A25A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dangerpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C44CCFA-2D40-B04C-EDC7-8499BF68A25A}|Assembly-CSharp.csproj|C:\\Projects\\CMPM125\\Physics-World\\assets\\scripts\\jumppad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C44CCFA-2D40-B04C-EDC7-8499BF68A25A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jumppad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C44CCFA-2D40-B04C-EDC7-8499BF68A25A}|Assembly-CSharp.csproj|c:\\projects\\cmpm125\\physics-world\\assets\\scripts\\jumppad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C44CCFA-2D40-B04C-EDC7-8499BF68A25A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jumppad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C44CCFA-2D40-B04C-EDC7-8499BF68A25A}|Assembly-CSharp.csproj|c:\\projects\\cmpm125\\physics-world\\assets\\scripts\\dangerpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C44CCFA-2D40-B04C-EDC7-8499BF68A25A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dangerpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C44CCFA-2D40-B04C-EDC7-8499BF68A25A}|Assembly-CSharp.csproj|C:\\Projects\\CMPM125\\Physics-World\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,30 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 156,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DangerPad.cs",
               "DocumentMoniker": "C:\\Projects\\CMPM125\\Physics-World\\Assets\\Scripts\\DangerPad.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DangerPad.cs",
               "ToolTip": "C:\\Projects\\CMPM125\\Physics-World\\Assets\\Scripts\\DangerPad.cs",
               "RelativeToolTip": "Assets\\Scripts\\DangerPad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T02:44:20.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "JumpPad.cs",
               "DocumentMoniker": "C:\\Projects\\CMPM125\\Physics-World\\Assets\\Scripts\\JumpPad.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\JumpPad.cs",
               "ToolTip": "C:\\Projects\\CMPM125\\Physics-World\\Assets\\Scripts\\JumpPad.cs",
               "RelativeToolTip": "Assets\\Scripts\\JumpPad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T02:38:35.231Z",
               "EditorCaption": ""
@@ -58,7 +58,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
               "ToolTip": "C:\\Projects\\CMPM125\\Physics-World\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T00:21:31.479Z"
             }

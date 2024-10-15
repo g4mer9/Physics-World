@@ -74,6 +74,7 @@
     <Compile Include="Assets\Week2\CameraLookShoot.cs" />
     <Compile Include="Assets\Week2\PushDoor.cs" />
     <Compile Include="Assets\Week2\PhysicsUpdates.cs" />
+    <Compile Include="Assets\Scripts\BallPad.cs" />
     <Compile Include="Assets\Week2\DamageTrap.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>

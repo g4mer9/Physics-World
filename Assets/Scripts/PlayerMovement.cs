@@ -8,10 +8,10 @@ public class PlayerMovement : MonoBehaviour
 
     private bool can_jump = true;
     //private float gravity_strength = 10.0f;
-    private float jump_power = 20.0f;
-    private float walk_power = 15.0f;
+    private float jump_power = 120.0f;
+    private float walk_power = 60.0f;
     private int jump_timer = 0;
-    private int jump_length = 20;
+    private int jump_length = 10;
     private int rotate_speed = 5;
     private float xRotation = 0f;
     public float mouseSensitivity = 10f;

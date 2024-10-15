@@ -15,4 +15,19 @@ public class JumpPad : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject other = collision.gameObject;
+        if (other != null && other.tag == "Player")
+        {
+            Debug.Log("collision");
+            //taken from lecture script
+            Vector3 contact_point;
+            contact_point = transform.position;
+
+            collision.rigidbody.AddExplosionForce(5000, contact_point, 20);
+        }
+    }
+
 }

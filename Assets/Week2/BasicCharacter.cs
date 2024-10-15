@@ -1,0 +1,64 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+// Code from https://docs.unity3d.com/ScriptReference/CharacterController.Move.html 
+
+public class BasicCharacter : MonoBehaviour
+{
+    private CharacterController controller;
+    private Vector3 playerVelocity;
+    private bool groundedPlayer;
+    [SerializeField] private float playerSpeed = 6.0f;
+    [SerializeField] private float rotateSpeed = 0.5f;
+    [SerializeField] private float jumpHeight = 4.0f;
+    private int health = 100;
+    private float gravityValue = -9.81f;
+
+    private void Start()
+    {
+        controller = GetComponent<CharacterController>();
+    }
+
+    void Update()
+    {
+        groundedPlayer = controller.isGrounded;
+        if (groundedPlayer && playerVelocity.y < 0)
+        {
+            playerVelocity.y = 0f;
+        }
+
+        //Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //controller.Move(move * Time.deltaTime * playerSpeed);
+
+        //if (move != Vector3.zero)
+        //{
+        //    gameObject.transform.forward = move;
+        //}
+
+
+        // Rotate around y - axis
+        transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);
+
+        // Move forward / backward
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
+        float curSpeed = playerSpeed * Input.GetAxis("Vertical");
+        controller.SimpleMove(forward * curSpeed);
+
+
+        //// Changes the height position of the player..
+        if (Input.GetButtonDown("Jump") && groundedPlayer)
+        {
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+        }
+
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
+
+        Debug.DrawRay(transform.position, transform.up * -1.5f, Color.yellow);
+        Debug.DrawRay(transform.position, transform.forward, Color.green);
+        //Debug.Log(health);
+    }
+
+}

@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        //modified GPT FPS camera code{
+        //modified GPT FPS camera code{https://chatgpt.com/share/670de0ea-5738-8007-87ea-121dc6ef8ebd
 
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.fixedDeltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.fixedDeltaTime;
@@ -48,16 +48,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-        //raycast down a few units to check grounded, else vel.y = 0f
         if(Physics.Raycast(transform.position, -transform.up, 1))
         {
             can_jump = true;
             jump_timer = 0;
         }
-        //stop jumping and let gravity take over?
-        /**else*/
-        if (jump_timer >= jump_length || (Input.GetButtonUp("Jump") && jump_timer >= (jump_length/2))) can_jump = false;
+        else if (jump_timer >= jump_length || (Input.GetButtonUp("Jump") && jump_timer >= (jump_length/2))) can_jump = false;
 
         if (Input.GetAxis("Horizontal") != 0)
         {

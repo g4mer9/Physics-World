@@ -22,7 +22,7 @@ public class JumpPad : MonoBehaviour
         if (other != null && other.tag == "Player")
         {
             Debug.Log("collision");
-            //taken from lecture script
+            //adapted from lecture script
             Vector3 contact_point;
             contact_point = transform.position;
 
